@@ -1,0 +1,215 @@
+/* ===== Universities Section ===== */
+.universities-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #FDFDFD 0%, #F8F8F8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.universities-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 40px;
+  color: #1C085D;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Georgia', serif;
+}
+
+.section-heading i {
+  font-size: 44px;
+  color: #EB001B;
+  margin-right: 12px;
+  position: relative;
+  top: -2px;
+}
+
+.section-heading::after {
+  content: '';
+  width: 60px;
+  height: 2px;
+  background: #EB001B;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Section Subtitle */
+.section-subtitle {
+  font-size: 17px;
+  color: #666666;
+  margin-bottom: 50px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Universities Grid */
+.universities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 0 15px;
+}
+
+/* University Card */
+.university-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #EDEDED;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.university-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #EB001B;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.university-card:hover::before {
+  transform: scaleX(1);
+}
+
+.university-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* University Logo */
+.university-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.university-card:hover .university-logo {
+  transform: scale(1.05);
+}
+
+/* University Name */
+.university-name {
+  font-size: 18px;
+  color: #1C085D;
+  font-weight: 500;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.4;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .universities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .section-heading {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .universities-section {
+    padding: 80px 15px;
+  }
+
+  .universities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .section-heading {
+    font-size: 32px;
+  }
+
+  .section-heading i {
+    font-size: 38px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .university-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .university-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 28px;
+    display: block;
+    text-align: center;
+  }
+
+  .section-heading i {
+    font-size: 34px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .section-heading::after {
+    width: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .universities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .university-card {
+    padding: 20px;
+  }
+
+  .university-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .university-name {
+    font-size: 15px;
+  }
+}
